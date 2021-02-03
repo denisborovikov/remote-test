@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ButtonStyled } from 'components/Button/styles';
 
 export const Card = styled.div`
   --spacer: 32px;
@@ -20,8 +21,13 @@ export const CardBody = styled.div`
 `;
 
 export const CardFooter = styled.div`
+  text-align: center;
   padding: var(--spacer);
   background-color: #f9faff;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+
+  ${ButtonStyled} + ${ButtonStyled} {
+    margin-left: 16px;
+  }
 `;

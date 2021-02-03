@@ -16,7 +16,7 @@ export const TableRow = styled.tr``;
 
 export const TableThCell = styled.th`
   white-space: nowrap;
-  padding: 18px 0 18px 16px;
+  padding: 18px 16px;
   text-align: left;
   font-size: 0.6875rem;
   text-transform: uppercase;
@@ -31,7 +31,6 @@ export const TableThCell = styled.th`
 
   &:last-child {
     border-radius: 0 8px 8px 0;
-    padding-right: 16px;
   }
 `;
 
@@ -41,7 +40,7 @@ TableThCell.defaultProps = {
 
 export const TableCell = styled.td`
   height: 64px;
-  padding: 8px 16px 8px 16px;
+  padding: 8px 16px;
   border-top: 1px solid var(--colors-mischka);
   text-align: ${({ align }) => align};
 

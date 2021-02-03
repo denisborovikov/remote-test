@@ -33,6 +33,7 @@ const LogoRight = styled.path``;
 
 const Wrapper = styled.div`
   width: 36px;
+  margin: 200px auto;
 
   ${LogoLeft} {
     animation: ${animateLeft} 1s infinite;

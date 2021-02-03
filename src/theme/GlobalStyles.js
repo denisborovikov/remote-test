@@ -5,9 +5,7 @@ import colors from './colors';
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
-
   ${fontFaces}
-  
   :root {
     ${colors}
 

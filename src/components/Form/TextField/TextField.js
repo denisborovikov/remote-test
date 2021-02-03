@@ -1,15 +1,24 @@
+import { useField } from 'formik';
 import PropTypes from 'prop-types';
-import { Field, Label, Hint } from '../FieldParts';
+import { Field, Hint, Label } from '../FieldParts';
 import { Input } from './styles';
 
-export default function TextField({ label, helper, errorMsg, ...props }) {
-  const invalidAttr = errorMsg ? { 'aria-invalid': true } : {};
+export default function TextField({ name, label, helper, ...props }) {
+  const [field, { touched, error }] = useField(name);
+
+  const invalidAttr = touched && error ? { 'aria-invalid': true } : {};
+
+  const inputProps = {
+    ...props,
+    ...invalidAttr,
+    ...field,
+  };
 
   return (
     <Field as="label">
       <Label>{label}</Label>
-      <Input {...props} {...invalidAttr} />
-      <Hint errorMsg={errorMsg} helper={helper} />
+      <Input {...inputProps} />
+      <Hint errorMsg={touched && error ? error : undefined} helper={helper} />
     </Field>
   );
 }
@@ -19,12 +28,12 @@ TextField.defaultProps = {
 };
 
 TextField.propTypes = {
+  /** Field name */
+  name: PropTypes.string,
   /** Field type */
   type: PropTypes.string,
   /** Field label */
   label: PropTypes.string.isRequired,
   /** Field description message */
   helper: PropTypes.string,
-  /** Field error message */
-  errorMsg: PropTypes.string,
 };
