@@ -1,8 +1,9 @@
+This is a test exercise for Remote.   
+
 ## Expectations
 
 * It should be production-ready code - the code will show us how you ship things to production and be a mirror of your
   craft.
-* Take whatever time you need - we won't look at start/end dates, you have a life besides this and we respect that!
 
 ### What are you building
 
@@ -23,10 +24,8 @@ For further details, follow the design specs in the Figma file.
 - How you write tests. Tests take time, so you just need to test:
     - Button component: Some tests are already done, you will need to complete them.
     - People list page: Write the needed tests.
-    - Edit or Create member: Pick one of the flows. You are free to choose between Testing Library, Cypress or any other
+    - Edit and Create a member. You are free to choose between Testing Library, Cypress or any other
       testing tool/approach.
-
----
 
 # The project
 
@@ -44,6 +43,26 @@ For further details, follow the design specs in the Figma file.
 - `POST http://localhost:4000/people`: create a new person
 - `PATCH http://localhost:4000/people/{id}`: update the person with id `{id}`
 
+## Available scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+[JSON server](https://github.com/typicode/json-server) will run concurrently in watch mode on port 4000 - [http://localhost:4000](http://localhost:4000).
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+Read the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run seed-db`
+
+Resets `db.json` to the original initial data (`db.base.json`).\
+This script runs automatically after `npm install`.
 
 ## My notes
 
