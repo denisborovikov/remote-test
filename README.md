@@ -45,3 +45,15 @@ For further details, follow the design specs in the Figma file.
 - `GET http://localhost:4000/people?name_like={substring}`: search for people where the name includes `{substring}`
 - `POST http://localhost:4000/people`: create a new person
 - `PATCH http://localhost:4000/people/{id}`: update the person with id `{id}`
+
+
+## My notes
+
+- The API request to `/people` endpoint returns a full set of data about every user, so technically, requests
+   to `people/userID` endpoints are redundant. Assuming that this is only because of the simplified implementation of
+   the test API and not an intentional behavior, I requested `people/userID` every time I needed the full user data.
+
+- On the people list page, if the user hovers the mouse cursor over the table cell with the Edit link or focuses it
+   using a keyboard, API runs data prefetching for this row's member in the background. If the user clicks the link, the
+   next page seems to load faster.
+
