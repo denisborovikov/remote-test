@@ -1,4 +1,16 @@
-This is a test exercise for Remote.   
+This is a test exercise for Remote.
+
+- [Demo](https://remote-test-task.netlify.app/)
+
+- [Depoloyed API server](https://remote-test-api.herokuapp.com/people)
+
+NOTES for deployed demos:
+
+There's a 1.5-second delay intentionally added to the API server to show how optimistic updates help to imporve response
+time.
+
+Editing users with `id > 3` always causes a server error to demonstrate an optimistic update and fallback
+after the error.
 
 ## Expectations
 
@@ -24,8 +36,8 @@ For further details, follow the design specs in the Figma file.
 - How you write tests. Tests take time, so you just need to test:
     - Button component: Some tests are already done, you will need to complete them.
     - People list page: Write the needed tests.
-    - Edit and Create a member. You are free to choose between Testing Library, Cypress or any other
-      testing tool/approach.
+    - Edit and Create a member. You are free to choose between Testing Library, Cypress or any other testing
+      tool/approach.
 
 # The project
 
@@ -47,17 +59,20 @@ For further details, follow the design specs in the Figma file.
 
 In the project directory, you can run:
 
-### `npm startall`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-[JSON server](https://github.com/typicode/json-server) will run concurrently in watch mode on port 4000 - [http://localhost:4000](http://localhost:4000).
+[JSON server](https://github.com/typicode/json-server) will run concurrently in watch mode on port 4000
+
+- [http://localhost:4000](http://localhost:4000).
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-Read the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Read the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
 ### `npm run seed-db`
 
@@ -67,10 +82,10 @@ This script runs automatically after `npm install`.
 ## My notes
 
 - The API request to `/people` endpoint returns a full set of data about every user, so technically, requests
-   to `people/userID` endpoints are redundant. Assuming that this is only because of the simplified implementation of
-   the test API and not an intentional behavior, I requested `people/userID` every time I needed the full user data.
+  to `people/userID` endpoints are redundant. Assuming that this is only because of the simplified implementation of the
+  test API and not an intentional behavior, I requested `people/userID` every time I needed the full user data.
 
 - On the people list page, if the user hovers the mouse cursor over the table cell with the Edit link or focuses it
-   using a keyboard, API runs data prefetching for this row's member in the background. If the user clicks the link, the
-   next page seems to load faster.
+  using a keyboard, API runs data prefetching for this row's member in the background. If the user clicks the link, the
+  next page seems to load faster.
 

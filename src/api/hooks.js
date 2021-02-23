@@ -45,6 +45,9 @@ export function usePrefetchPerson() {
 }
 
 function updatePerson(id) {
+  // For demo purposes, emulate a server error while editing
+  if (id > 3) return (data) => http.patch(`/notfound/`, data);
+
   return (data) => http.patch(`/people/${id}`, data);
 }
 
