@@ -22,7 +22,8 @@
   "scripts": {
     "seed-db": "node src/server/initJsonDb",
     "server": "json-server --watch --port 4000 --delay 1500 src/server/db.json",
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "startall": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "REACT_APP_API=https://remote-test-api.herokuapp.com/ react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

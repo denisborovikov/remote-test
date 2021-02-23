@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-export const BASE_URL = process.env.API || 'http://localhost:4000';
+export const BASE_URL = process.env.REACT_APP_API || 'http://localhost:4000';
+
+console.log('BASE_URL', process.env)
 axios.defaults.baseURL = BASE_URL;
 
 async function get(url, params) {
