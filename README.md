@@ -4,7 +4,7 @@
   craft.
 * Take whatever time you need - we won't look at start/end dates, you have a life besides this and we respect that!
 
-### 🚀 What are you building
+### What are you building
 
 This is a basic CRUD (without the delete) of people. You'll implement an app with 3 pages:
 
@@ -14,7 +14,7 @@ This is a basic CRUD (without the delete) of people. You'll implement an app wit
 
 For further details, follow the design specs in the Figma file.
 
-### 👀 What we will look at
+### What we will look at
 
 - How you work with HTML, CSS, and JavaScript in a React app;
 - How you reproduce the provided design;
@@ -25,8 +25,6 @@ For further details, follow the design specs in the Figma file.
     - People list page: Write the needed tests.
     - Edit or Create member: Pick one of the flows. You are free to choose between Testing Library, Cypress or any other
       testing tool/approach.
-
----
 
 ---
 
