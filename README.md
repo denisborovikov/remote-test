@@ -6,8 +6,7 @@ This is a test exercise for Remote.
 
 NOTES for deployed demos:
 
-There's a 1.5-second delay intentionally added to the API server to show how optimistic updates help to imporve response
-time.
+Use network throtling to see how optimistic updates help to imporve response time.
 
 Editing users with `id > 3` always causes a server error to demonstrate an optimistic update and fallback
 after the error.
